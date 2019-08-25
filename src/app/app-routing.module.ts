@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'accounts-receive', loadChildren: './views/accounts-receive/accounts-receive/accounts-receive.module#AccountsReceivePageModule' },
+  { path: 'accounts-receive-new', loadChildren: './views/accounts-receive/accounts-receive-new/accounts-receive-new.module#AccountsReceiveNewPageModule' },
+  { path: 'accounts-receive-edit', loadChildren: './views/accounts-receive/accounts-receive-edit/accounts-receive-edit.module#AccountsReceiveEditPageModule' }
 ];
 
 @NgModule({
